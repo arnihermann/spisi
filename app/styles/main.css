@@ -2,7 +2,7 @@
 /* MENU */
 #menu {
   background: red;
-  height: 100%;
+  bottom: 0;
   position: absolute;
   top: 0;
   width: 230px;
@@ -45,22 +45,18 @@
 }
 
 @media screen and (max-width: 767px) {
-  #menu,
-  .menu-list {
-    display: none;
-    position: static;
-  }
-
   #menu {
-    width: auto;
+    top: 30px;
+    width: 100%;
+    z-index: 99;
   }
 
-  .menu-list-item {
-    display: inline-block;
-    width: 80px;
+  .menu-list {
+    -webkit-overflow-scrolling: touch;
   }
+
   .menu-list-item a {
-    border-top: 0;
+    font-size: 20px;
   }
 
   .menu-mobile-toggle {
@@ -134,6 +130,7 @@
   #content {
     left: 0;
     position: absolute;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
