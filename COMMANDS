@@ -1,0 +1,31 @@
+10337  npm install -g yo
+10338  history
+10339  npm install -g generator-angular
+10340  npm uninstall -g generator-karma
+10341  npm install -g generator-angular
+10342  yo angular
+10343  ls
+10344  st .
+10345  grunt server
+10346  grunt
+10347  ls
+10348  ls dist
+10349  ls dist/styles
+10350  cat dist/styles/194217e8.main.css
+10351  cat dist/scripts/7e730882.scripts.js
+10352  rm -rf dist
+10353  grunt server
+10354  grunt serve
+10355  bower install angular-bootstrap
+10356  bower install angular-bootstrap --save
+10357  bower uninstall angular-bootstrap --save
+10358  grunt jshint
+10359  history
+10360  gst
+10361  git init
+10362  gst
+10363  git add .
+10364  gst
+10365  gc
+10366  history | tail 30
+
