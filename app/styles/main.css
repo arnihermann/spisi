@@ -1,4 +1,8 @@
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 /* MENU */
 #menu {
   background: red;
@@ -116,24 +120,35 @@
 }
 
 /* CONTENT */
-#content {
+#viewport {
   bottom: 0;
   left: 230px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  padding: 15px;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 30px;
 }
-#content.with-button-bar {
+#viewport.with-button-bar {
   bottom: 25px;
+}
+.content {
+  padding: 15px;
+}
+.scroller {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  width: 100%;
 }
 
 @media screen and (max-width: 767px) {
-  #content {
+  #viewport {
     left: 0;
     position: absolute;
+  }
+
+  .scroller {
     -webkit-overflow-scrolling: touch;
   }
 }
@@ -153,8 +168,8 @@
   background: #ccc;
   bottom: 0;
   height: 25px;
-  left: 230px;
-  position: fixed;
+  left: 0;
+  position: absolute;
   right: 0;
 }
 @media screen and (max-width: 767px) {
