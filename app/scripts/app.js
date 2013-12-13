@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('misiApp', [
+angular.module('spisiApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
