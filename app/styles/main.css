@@ -1,4 +1,5 @@
 
+/* MENU */
 #menu {
   background: red;
   height: 100%;
@@ -7,19 +8,36 @@
   width: 230px;
 }
 
+.menu-header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .menu-list {
   bottom: 0;
   left: 0;
+  margin: 0;
   overflow-x: hidden;
   overflow-y: scroll;
+  padding: 0;
   position: absolute;
   right: 0;
   top: 55px;
 }
 
+.menu-list-item {
+  list-style: none;
+}
 .menu-list-item a {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
   color: white;
+  display: block;
+  font-size: 13px;
+  padding: 3px 10px;
   text-decoration: none;
+}
+.menu-list-item a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 767px) {
@@ -28,11 +46,22 @@
     position: static;
   }
 
-  .menu-list {
-    max-height: 100px;
+  #menu {
+    width: auto;
+  }
+
+
+  .menu-list-item {
+    display: inline-block;
+    width: 80px;
+  }
+  .menu-list-item a {
+    border-top: 0;
   }
 }
 
+
+/* HEADER */
 #header {
   background: #ccc;
   height: 30px;
@@ -49,6 +78,8 @@
   }
 }
 
+
+/* LOGO */
 #logo {
   background: black;
   position: absolute;
@@ -62,6 +93,7 @@
   }
 }
 
+/* CONTENT */
 #content {
   bottom: 0;
   left: 230px;
@@ -83,17 +115,21 @@
   }
 }
 
-.menu-header {
-  font-size: 20px;
-  font-weight: bold;
-}
 
+/* BETA */
 .beta {
   position: absolute;
   right: 130px;
   top: 0;
 }
+@media screen and (max-width: 767px) {
+  .beta {
+    right: 10px;
+  }
+}
 
+
+/* BUTTON BAR */
 .btn-large-button {
   background: #ccc;
   bottom: 0;
