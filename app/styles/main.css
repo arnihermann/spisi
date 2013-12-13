@@ -72,6 +72,10 @@
   right: 0;
   top: 30px;
 }
+#content.with-button-bar {
+  bottom: 25px;
+}
+
 @media screen and (max-width: 767px) {
   #content {
     left: 0;
@@ -90,3 +94,11 @@
   top: 0;
 }
 
+.btn-large-button {
+  background: #ccc;
+  bottom: 0;
+  height: 25px;
+  left: 230px;
+  position: fixed;
+  right: 0;
+}
