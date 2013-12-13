@@ -46,9 +46,13 @@
 
 @media screen and (max-width: 767px) {
   #menu {
+    display: none;
     top: 30px;
     width: 100%;
     z-index: 99;
+  }
+  #menu.open {
+    display: block;
   }
 
   .menu-list {

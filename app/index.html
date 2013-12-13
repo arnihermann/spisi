@@ -41,7 +41,7 @@
     </div>
 
     <a href="" ng-click="mobileMenu.open=!mobileMenu.open" class="menu-mobile-toggle"><span class="icon-menu"></span></a>
-    <div id="menu" ng-show="mobileMenu.open">
+    <div id="menu" ng-class="{ open: mobileMenu.open }">
       <div class="menu-header">Vörur</div>
       <input type="text" name="search" value="" placeholder="Leitaðu hér">
       <ul class="menu-list">
