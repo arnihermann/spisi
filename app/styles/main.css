@@ -40,9 +40,14 @@
   text-decoration: underline;
 }
 
+.menu-mobile-toggle {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   #menu,
   .menu-list {
+    display: none;
     position: static;
   }
 
@@ -50,13 +55,23 @@
     width: auto;
   }
 
-
   .menu-list-item {
     display: inline-block;
     width: 80px;
   }
   .menu-list-item a {
     border-top: 0;
+  }
+
+  .menu-mobile-toggle {
+    color: black;
+    display: inline;
+    font-size: 18px;
+    left: 15px;
+    position: absolute;
+    text-decoration: none;
+    top: 5px;
+    z-index: 9;
   }
 }
 
@@ -71,10 +86,17 @@
   top: 0;
   z-index: 3;
 }
+.profile {
+  padding: 5px 0 0 15px;
+}
 @media screen and (max-width: 767px) {
   #header {
     left: 0;
-    position: static;
+    position: absolute;
+  }
+
+  .profile {
+    margin-left: 30px;
   }
 }
 
@@ -89,7 +111,7 @@
 }
 @media screen and (max-width: 767px) {
   #logo {
-    position: static;
+    position: absolute;
   }
 }
 
@@ -99,7 +121,7 @@
   left: 230px;
   overflow-x: hidden;
   overflow-y: scroll;
-  padding: 1em;
+  padding: 15px;
   position: absolute;
   right: 0;
   top: 30px;
@@ -111,7 +133,7 @@
 @media screen and (max-width: 767px) {
   #content {
     left: 0;
-    position: static;
+    position: absolute;
   }
 }
 
@@ -119,13 +141,8 @@
 /* BETA */
 .beta {
   position: absolute;
-  right: 130px;
-  top: 0;
-}
-@media screen and (max-width: 767px) {
-  .beta {
-    right: 10px;
-  }
+  right: 100px;
+  top: 5px;
 }
 
 
@@ -141,6 +158,6 @@
 @media screen and (max-width: 767px) {
   .btn-large-button {
     left: 0;
-    position: static;
+    position: fixed;
   }
 }
