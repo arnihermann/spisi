@@ -1,0 +1,84 @@
+#menu {
+  background: @menuBackground;
+  bottom: 0;
+  box-shadow: 0 0 5px #000, -5px 0 5px rgba(255,255,255,0.5) inset;
+  position: absolute;
+  top: 0;
+  width: @menuWidth;
+  z-index: 9;
+}
+
+.menu-header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu-list {
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 55px;
+}
+
+.menu-list-item {
+  list-style: none;
+}
+.menu-list-item a {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  display: block;
+  font-size: 13px;
+  padding: 3px 10px;
+  text-decoration: none;
+}
+.menu-list-item a:hover {
+  background: @menuBackgroundHighlight;
+  box-shadow: -5px 0 5px rgba(255,255,255,0.5) inset;
+  text-decoration: none;
+}
+
+.menu-mobile-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  #menu {
+    .animated;
+    .slideOutUp;
+
+    top: 30px;
+    width: 100%;
+    z-index: 99;
+  }
+  #menu.open {
+    .animated;
+    .slideInDown;
+  }
+  #menu.first-load {
+    display: none;
+  }
+
+  .menu-list {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu-list-item a {
+    font-size: 20px;
+  }
+
+  .menu-mobile-toggle {
+    color: white;
+    display: inline;
+    font-size: 18px;
+    left: 15px;
+    position: absolute;
+    text-decoration: none;
+    top: 5px;
+    z-index: 105;
+  }
+}
