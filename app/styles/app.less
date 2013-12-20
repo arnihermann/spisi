@@ -1,4 +1,7 @@
 
+@import (less) "../bower_components/normalize-css/normalize.css";
+@import (less) "../bower_components/animate.css/animate.css";
+
 @import "variables.less";
 @import "fonts.less";
 
@@ -136,9 +139,13 @@
 #viewport.with-button-bar {
   bottom: 25px;
 }
+
 .content {
+  .animated;
+  .fadeIn;
   padding: 15px;
 }
+
 .scroller {
   height: 100%;
   overflow-x: hidden;
