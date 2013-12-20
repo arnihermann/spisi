@@ -27,6 +27,10 @@ module.exports = function (grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
+      less: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
+        tasks: ['newer:less:dev']
+      },
       js: {
         files: ['{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js'],
         tasks: ['newer:jshint:all']
@@ -136,9 +140,18 @@ module.exports = function (grunt) {
       }
     },
 
-
-
-
+    less: {
+      dev: {
+        files: {
+          '.tmp/styles/app.css': '<%= yeoman.app %>/styles/app.less'
+        }
+      },
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/app.css': '<%= yeoman.app %>/styles/app.less'
+        }
+      }
+    },
 
     // Renames files for browser caching purposes
     rev: {
@@ -326,6 +339,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'less:dev',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
