@@ -10,7 +10,8 @@
     "angular-sanitize": "~1.2.0",
     "angular-route": "~1.2.0",
     "normalize-css": "~2.1.3",
-    "animate.css": "~3.0.0"
+    "animate.css": "~3.0.0",
+    "unsemantic": "*"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.0",

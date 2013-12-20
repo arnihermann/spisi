@@ -13,6 +13,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="bower_components/unsemantic/assets/stylesheets/unsemantic-grid-responsive.css">
     <link rel="stylesheet" href="styles/app.css">
     <!-- endbuild -->
 </head>
@@ -176,12 +177,51 @@
     <div id="viewport">
       <div class="scroller">
         <div class="content">
-          <p><a href="">Lorem ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          <p id="p1"><a href="">Lorem ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <div class="card-list">
+            <div class="grid-container">
+              <div class="grid-25">
+                <div class="card-list-item" ng-class="{ 'card-list-item-flip': flip }" ng-init="flip=false">
+                  <h3 class="card-list-item-header">iPhone 4.1</h3>
+                  <img src="images/iphone.png" class="img-responsive" ng-click="flip=!flip">
+                  <a href="" class="card-list-item-btn">Kaupa</a>
+                </div>
+              </div>
+              <div class="grid-25">
+                <div class="card-list-item">
+                  <h3 class="card-list-item-header">iPhone 4s</h3>
+                  <img src="images/iphone.png" class="img-responsive">
+                  <a href="" class="card-list-item-btn">Kaupa</a>
+                </div>
+              </div>
+              <div class="grid-25">
+                <div class="card-list-item">
+                  <h3 class="card-list-item-header">iPhone 5</h3>
+                  <img src="images/iphone.png" class="img-responsive">
+                  <a href="" class="card-list-item-btn">Kaupa</a>
+                </div>
+              </div>
+              <div class="grid-25">
+                <div class="card-list-item">
+                  <h3 class="card-list-item-header">iPhone 5s</h3>
+                  <img src="images/iphone.png" class="img-responsive">
+                  <a href="" class="card-list-item-btn">Kaupa</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <a href="" class="btn btn-large-button">Click me</a>

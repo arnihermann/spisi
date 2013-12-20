@@ -12,6 +12,12 @@
 @import "menu.less";
 
 
+.img-responsive {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
 
 /* HEADER */
 #header {
@@ -71,6 +77,37 @@
   .animated;
   .fadeIn;
   padding: 15px;
+}
+
+.card-list {
+  //background: #eee;
+  //padding: 0 0 20px 0;
+}
+
+.card-list-item {
+  background: #fff;
+  //border: 1px solid #ccc;
+  border-radius: @defaultBorderRadius;
+  box-shadow: 0 0 5px #ccc;
+}
+.card-list-item-flip img {
+  .animated;
+  .flipInY;
+}
+.card-list-item-header {
+  font-weight: normal;
+  margin-bottom: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+.card-list-item-btn {
+  background: @menuBackground;
+  border-radius: 0 0 @defaultBorderRadius @defaultBorderRadius;
+  color: white;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .scroller {
